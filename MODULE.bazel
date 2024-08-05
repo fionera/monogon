@@ -46,6 +46,7 @@ single_version_override(
         "//third_party:rust-uefi-platform.patch",
         "//third_party:rust-prost-nostd.patch",
         "//third_party:rust-reproducibility.patch",
+        "//third_party:rust-foo.patch",
     ],
     version = "0.48.0",
 )

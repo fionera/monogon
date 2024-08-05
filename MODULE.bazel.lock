@@ -6081,7 +6081,7 @@
     },
     "@@rules_rust~//crate_universe/private/module_extensions:cargo_bazel_bootstrap.bzl%cargo_bazel_bootstrap": {
       "general": {
-        "bzlTransitiveDigest": "VuPsUVfxJala8Xq0CqOhjdfJU4eox6LFRAQ0zq5GFAo=",
+        "bzlTransitiveDigest": "hvMMY4LBvKA4VORdMydQe8Ku/K2yTyBTOxC3Mj8xWjw=",
         "usagesDigest": "mcPm2zFtJ7UYgE1bjOcK2MFjP2jqdHxG944RmYWriYQ=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
@@ -6174,7 +6174,7 @@
     },
     "@@rules_rust~//rust:extensions.bzl%rust": {
       "general": {
-        "bzlTransitiveDigest": "F736QBfeosO6muSg/6UBJDrGre+JgCF6nj6yeHwqtlY=",
+        "bzlTransitiveDigest": "szjtdqJtRQnelTREF+StEA0seOWThRfdsnuIV+0QxYk=",
         "usagesDigest": "2FeNXrSwl1bLV/L9xhwA+oJaqehXQH8xl0diSwa8D1k=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
@@ -7369,7 +7369,7 @@
     },
     "@@rules_rust~//rust/private:extensions.bzl%i": {
       "general": {
-        "bzlTransitiveDigest": "lhW1Cjv8DAdYtxiMUSSzB1oYyfV8JCkh7dHNwPY3IhU=",
+        "bzlTransitiveDigest": "HDKbHK2xPfNl8FdErWYpIzWwrmLFFMq6LfAJFzmPa5s=",
         "usagesDigest": "8rxNHg4HjTBAPEiIdmi1v8o2l8IMjsu1iuZOGuvYmFQ=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},

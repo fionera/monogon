@@ -1,0 +1,59 @@
+From 545c242a508c2c2154923b7a1c9d70e519100033 Mon Sep 17 00:00:00 2001
+From: Tim Windelschmidt <tim@monogon.tech>
+Date: Tue, 23 Jul 2024 04:56:11 +0200
+Subject: [PATCH] foo
+
+---
+ rust/private/rustc.bzl | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+diff --git a/rust/private/rustc.bzl b/rust/private/rustc.bzl
+index dd3d816c..b80b6a28 100644
+--- a/rust/private/rustc.bzl
++++ b/rust/private/rustc.bzl
+@@ -413,6 +413,7 @@ def get_linker_and_args(ctx, attr, crate_type, cc_toolchain, feature_configurati
+             - (dict): Environment variables to be set for given action.
+     """
+     user_link_flags = get_cc_user_link_flags(ctx)
++    print(user_link_flags)
+
+     if crate_type in ("bin") or add_flags_for_binary:
+         is_linking_dynamic_library = False
+@@ -446,11 +447,18 @@ def get_linker_and_args(ctx, attr, crate_type, cc_toolchain, feature_configurati
+         runtime_library_search_directories = rpaths,
+         user_link_flags = user_link_flags,
+     )
++    print(cc_toolchain,
++          is_linking_dynamic_library,
++          rpaths,
++          user_link_flags)
+     link_args = cc_common.get_memory_inefficient_command_line(
+         feature_configuration = feature_configuration,
+         action_name = action_name,
+         variables = link_variables,
+     )
++    print(feature_configuration)
++    print(link_variables)
++    print(link_args)
+     link_env = cc_common.get_environment_variables(
+         feature_configuration = feature_configuration,
+         action_name = action_name,
+@@ -1018,6 +1026,7 @@ def construct_arguments(
+             env.update(link_env)
+             rustc_flags.add(ld, format = "--codegen=linker=%s")
+
++            print(link_args)
+             # Split link args into individual "--codegen=link-arg=" flags to handle nested spaces.
+             # Additional context: https://github.com/rust-lang/rust/pull/36574
+             rustc_flags.add_all(link_args, format_each = "--codegen=link-arg=%s")
+@@ -1151,6 +1160,7 @@ def rustc_compile_action(
+     rustc_rmeta_output = crate_info_dict.get("rustc_rmeta_output", None)
+
+     cc_toolchain, feature_configuration = find_cc_toolchain(ctx)
++    print(ctx, cc_toolchain, feature_configuration)
+
+     # Determine whether to use cc_common.link:
+     #  * either if experimental_use_cc_common_link is 1,
+--
+2.44.1
+
